@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자의 요청을 담아서 보냅니다.</title>
+</head>
+
+<!-- 이 문서는 PostReqExam.java파일과 연관되어진다. -->
+<body>
+	<div>
+		<form action="notice-reg" method = "post">
+		<!-- action엔 서블릿 맵핑 주소를 기입한다. 우리는 PostReqExam.java파일과 연동지어서 작성할 것이므로 PostReqExam에 있는 url을 써준다.-->
+			<div>
+				<label>제목:</label> <input name="title" type="text">
+				<!-- 제목은 text타입으로 입력을 받고 입력받은 파라미터를 출력할 변수명을 title로 선언해준다. -->
+				<!-- 사용자는 이것을 post요청하여 서버에 전달 할 것이다 -->
+			</div>
+			<div>
+			<label>내용:</label>
+			<textarea name="content"></textarea>
+			<!-- 여기도 마찬가지로 입력받은 파라미터를 출력할 변수명을 content로 선언해준다 -->
+			</div>
+			<div>
+				<input type="submit" value="등록" />
+				<!-- 그리고 등록을 누르면 출력된다 -->
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>
