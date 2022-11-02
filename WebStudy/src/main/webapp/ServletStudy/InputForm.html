@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자의 입력을 받아야합니다.</title>
+</head>
+<body>
+
+<!-- 이 문서는 defalutQueryString.java 파일과 연동하여 사용 할 것이다. -->
+
+<!-- 이제 본격적으로 우리가 사용자에게 제공하기 위한,그리고 입력을 처리하기 위한 form 태그를 만들어 줄 것이다. -->
+	<div>
+		<form action="defaultStr">
+		<!-- action엔 서블릿 맵핑 주소를 기입한다. 우리는 defalutQueryString.java파일에 있는 @WebServlet 어노테이션에 있는 내용을 넣어주면 된다. -->
+			<div>
+				<label>"원하시는 횟수를 입력 해 주세요.</label>
+			</div>
+			<div>
+			<!-- 사용자가 입력을 위해 사용 될 수 있는 태그인 input태그를 달아줘야한다. 타입은 여러가지가 있고 지정 해 주어야한다. -->
+				<input type="text" name="clientReq" />
+				<!-- 입력 타입은 text로 받고 그 이름은 clientReq라는 뜻이다. -->
+				<!-- 여기서 가장 중요한건 위의 name 속성이다. 이게 쿼리스트링의 매개변수(사용자가 입력한 값)나 마찬가지다. -->
+				<input type="submit" value="출력" />
+				<!-- 아래 input태그는 전달하는 submit도 있어야한다. 입력을 전달한다는 뜻이다. 뒤의 value는 보여지는 문구이다. -->
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>
