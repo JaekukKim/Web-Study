@@ -10,6 +10,7 @@ public class UserDAO {
 	private Connection conn;
 	private PreparedStatement pstmt;
 	private ResultSet rs;
+	// 필드를 선언하는데 이 필드들은 sql문을 사용하기 위한 필드이다.
 
 	// mysql에 접속을 할 수 있게 생성자를 초기화하는 코드를 만들어준다. db에 접근하기 위한 url,id,비밀번호를 입력해야하는 과정을 코딩한다.
 	public UserDAO() {
