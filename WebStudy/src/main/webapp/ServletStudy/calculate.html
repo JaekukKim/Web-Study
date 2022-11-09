@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>submit 버튼 여러개 만들기</title>
+</head>
+<body>
+	<form action="calculate" method="post">
+		<div>
+			<label>x의 값을 입력하세요 : </label>
+			<input type="text" name="x" />
+		</div>
+		<div>
+			<label>y의 값을 입력하세요 : </label>
+			<input type="text" name="y" />
+		</div>
+		<div>
+			<input type="submit" name="operator" value="덧셈"/>
+			<input type="submit" name="operator" value="뺄셈"/>
+			<input type="submit" name="operator" value="나눗셈"/>
+			<input type="submit" name="operator" value="곱셈"/>
+			<!-- input 태그 안 submit버튼에 name을 지정해주면 그 이름에 해당하는 경우에 따라
+			연산을 어떻게 할것인지, 처리를 어떻게 할 것인지 지정이 가능하다. -->
+		</div>
+	</form>
+</body>
+</html>
