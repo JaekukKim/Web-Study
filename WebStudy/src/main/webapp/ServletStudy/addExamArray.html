@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연산과제 페이지</title>
+</head>
+<body>
+	<form action="array" method="post">
+
+		<!--위와 같이 입력값을 하나로만 받아도 되지만 범위가 커지면 그럴 수 가 없다.
+		그리고 위의 입력 박스는 "고정"되어 있다. -->
+		<!-- 그래서 이번엔 여러 값을 입력을 받아 "배열"형태로 출력되게 해볼려고 한다 -->
+		<div>
+		<!-- 여러개의 값을 받게 만든다면 받는쪽도 괴롭고 쓰는쪽도 일일히 단순노동을 해줘야 해서 번거롭다.
+		이렇게 "가변적인"길이는 아래와 같이 한다면 "배열"형태로 출력되게 할 수 있다. -->
+			<input type="text" name="num" />
+			<input type="text" name="num" />
+			<input type="text" name="num" />
+			<input type="text" name="num" />
+		<!-- 위와 같이 이름을 전부 같게 설정해준다면 "배열"로 전달이 된다 -->
+		<!-- 그럼 연관된 자바파일은 "배열"형태로 코드를 짜주면 된다 -->
+		</div>
+		<div>
+			<input type="submit" value="덧셈시작" />
+		</div>
+	</form>
+</body>
+</html>
