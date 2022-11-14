@@ -18,7 +18,7 @@ public class SessionExam extends HttpServlet {
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// HttpServletRequest와 ServletRequest 차이점 깃헙 댓글에 꼭 쓰기.
 
-		ServletContext application = request.getServletContext();
+//		ServletContext application = request.getServletContext();
 
 		// 세션을 객체화 시켜준다.
 		HttpSession session = request.getSession();
