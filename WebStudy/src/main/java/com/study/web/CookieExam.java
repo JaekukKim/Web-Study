@@ -125,6 +125,17 @@ public class CookieExam extends HttpServlet {
 			response.addCookie(valueCookie);
 			response.addCookie(opCookie);
 
+			/*
+			 * [2022-11-17 사용자에게 페이지를 돌려주는 redirect
+			 * 현재 이 코드는 연산은 성공적으로 가능하나 연산기호를 눌러서 입력값을 전달 할 시 백지상태로 넘어가는 치명적인 단점이 존재했다.
+			 * 이제 그걸 해결해보려고 한다. 아주아주 간단하다 sendRedirect() 메소드 하나로 ok
+			 */
+			
+			response.sendRedirect("CookieExam.html");
+			// 이 얼마나 멋진가 그냥 안에다가 돌려보낼 html파일 이름만 넣어주면 된다. 여기에 다른 페이지로 돌려보내고 싶다? 얼마든지 가능하다.
+			// 위 메소드가 실행되었다는 증거는 웹 페이지에서 한번 값을 요청하면 "뒤로가기"버튼이 활성화 되었다는 것이다.
+			// 이로써 할 수 있는건 저 위의 CookieExam.html "다시 요청" 했다는 것이다.
+			
 		}
 
 	}
