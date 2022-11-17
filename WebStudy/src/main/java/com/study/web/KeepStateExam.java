@@ -68,6 +68,8 @@ public class KeepStateExam extends HttpServlet {
 				result = x + y;
 			} else if (operator.equals("-")) {
 				result = x - y;
+			} else if (operator.equals("x")) {
+				result = x * y;
 			}
 			pw.println("연산 결과는?: " + (result));
 
