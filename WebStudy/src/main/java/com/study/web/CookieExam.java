@@ -124,6 +124,17 @@ public class CookieExam extends HttpServlet {
 			// 이렇게 되면 response의 Header에 심어진 형태로 전달이 된다.
 			response.addCookie(valueCookie);
 			response.addCookie(opCookie);
+			
+			/*
+			 * 2022 - 11 - 19 쿠키를 삭제하는 과정이다. 
+			 * 만약 웹 페이지에서 reset 버튼을 클릭한다면 쿠키의 수명을 강제로 0으로 만드는 식으로 하여
+			 * 쿠키를 지워버리는 작업이다.
+			*/
+			
+			if (op != null && op.equals("reset")) {
+				valueCookie.setMaxAge(0);
+				opCookie.setMaxAge(0);
+			}
 
 			/*
 			 * [2022-11-17 사용자에게 페이지를 돌려주는 redirect
@@ -135,6 +146,7 @@ public class CookieExam extends HttpServlet {
 			// 이 얼마나 멋진가 그냥 안에다가 돌려보낼 html파일 이름만 넣어주면 된다. 여기에 다른 페이지로 돌려보내고 싶다? 얼마든지 가능하다.
 			// 위 메소드가 실행되었다는 증거는 웹 페이지에서 한번 값을 요청하면 "뒤로가기"버튼이 활성화 되었다는 것이다.
 			// 이로써 할 수 있는건 저 위의 CookieExam.html "다시 요청" 했다는 것이다.
+			
 			
 		}
 

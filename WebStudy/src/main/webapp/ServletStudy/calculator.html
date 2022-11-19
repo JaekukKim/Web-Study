@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>get,post 함수 예제</title>
+</head>
+<body>
+	<form action="calculator" method="get">
+	<!-- 조건처리를 어떻게 할것이냐를 보자 -->
+		<input type = "submit" value = "get요청" onclick="alert('get요청이 들어왔으므로 doGet메소드가 호출되었습니다')">
+		<!-- 자바스크립트의 클릭시 경고창이 나오는 alert은 input태그와 섞어 써 줄라면 위의 방식으로 써 주어야 한다. -->
+	</form>
+	<form action="calculator" method="post">
+	<!-- 조건처리를 어떻게 할것이냐를 보자 -->
+		<input type = "submit" value = "post요청" onclick="alert('post요청이 들어왔으므로 doPost메소드가 호출되었습니다')">
+	</form>
+</body>
+</html>
